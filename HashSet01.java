@@ -48,9 +48,7 @@ public class HashSet01 {
     public static void main(String[] args) {
 
 
-
-
-      HashSet<String> hs1 =new HashSet<>(Arrays.asList("erdem","furkan","samet","hakan"));
+        HashSet<String> hs1 =new HashSet<>(Arrays.asList("erdem","furkan","samet","hakan"));
         hs1.add("halil");
         System.out.println(hs1);//[furkan, halil, hakan, erdem, samet]
 

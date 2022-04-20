@@ -1,5 +1,6 @@
 package _17_Set;
 
+import java.lang.module.FindException;
 import java.util.HashSet;
 
 public class Ex07 {
@@ -17,9 +18,30 @@ public class Ex07 {
 	 * 
 	 * hashSetin degerlerinin toplamini alacaksiniz.
 	 */
+	static HashSet <Double> hashSet = new HashSet<>();
 
 	public static void main(String[] args) {
 
+		hashSet = setOlustur (new double[]{3.23 , 3.10 , 5.12 , 10.12 , 23.12});
+		System.out.println(hashSet);
+
+		toplamiBul (hashSet);
 
 	}
+
+	private static void toplamiBul(HashSet<Double> hashSet) {
+		double toplam = 0;
+		for (double each:hashSet) {
+			toplam +=  each;
+		}
+		System.out.println(toplam);
+	}
+
+	private static HashSet<Double> setOlustur(double[] doubles) {
+		for (int i = 0; i < doubles.length; i++) {
+			hashSet.add(doubles[i]);
+		}
+		return hashSet;
+	}
+
 }
